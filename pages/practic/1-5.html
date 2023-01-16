@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Вкладка "Параметры"</title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet" 
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+
+				<script type="text/javascript">
+			$(function() {
+				$('nav#practic').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false, 
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Архитектура Civil 3D'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+					<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">		
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li class="active"><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">	
+<h2>Вкладка Параметры</h2>
+<p>
+Вкладка Параметры может использоваться для управления стилями объектовAutoCAD Civil 3D, а также для задания параметров чертежей и команд.
+</p><p>Команды вызываются щелчком правой кнопкой мыши на коллекциях и объектах.
+</p>
+<img id="imgc" src="../../img/practic/1archi/51.png"/>
+<p>Эта вкладка служит для организации стилей, относящихся к различным типам объектов. Большинство этих стилей присутствует в стандартной иерархии вложенных папок даже в пустом чертеже. Стили в чертеже можно создавать, изменять, а затем сохранять в качестве шаблона. В чертежах, создаваемых впоследствии на основе такого шаблона, автоматически будет присутствовать тот же набор стилей. Можно изменять стили объектов, меток и таблиц. Также можно управлять параметрами чертежей и команд.
+</p><h3>Управление элементами, отображаемыми в дереве параметров
+</h3><p>Для указания элементов, которые следует отображать в дереве вкладки Параметры, используйте разворачивающийся список в верхней части вкладки Параметры.
+</p>
+<img id="imgc" src="../../img/practic/1archi/52.png"/>
+<p>Выберите одно из следующих представлений дерева на вкладке Параметры:
+</p>
+<ul><li><strong>Главное представление.  </strong>Отображает элементы для всех открытых чертежей. Имя активного чертежа показано жирным шрифтом.
+</li><li><strong>Просмотр параметров активного чертежа. </strong> Отображает элементы только активного чертежа.
+</li><li><strong>Просмотр меток только активного чертежа. </strong> Отображает коллекции и элементы стилей меток только для активного чертежа.
+</li><li><strong>Просмотр только меток. </strong>Отображает только коллекции и элементы стилей меток для всех чертежей.
+</li></ul>
+<h3>Дерево параметров</h3>
+<p>Дерево вкладки Параметры используется для управления стилями объекта, метки и таблицы и настройки параметров для чертежей и команд.
+</p><p>На следующем чертеже приведены коллекции высшего уровня дерева вкладки Параметры:
+</p>
+<img id="imgc" src="../../img/practic/1archi/53.png"/>
+<p>Большинство коллекций объектов имеет стандартную структуру и использует стандартное контекстное меню.
+</p><p>Значки в верхней части вкладки Параметры используются для управления ориентацией вида элемента, для вызова окна "Панорама" и для доступа к Справке.
+</p>
+<table>
+<tr>
+<td><strong>Иконка</strong></td>
+<td><strong>Назначение</strong></td>
+</tr>
+<tr>
+<td><img id="imgc" src="../../img/practic/1archi/54.png"/></td>
+<td>Переключает ориентацию представления элемента, когда окно "Область инструментов" является плавающим.</td>
+</tr>
+<tr>
+<td><img id="imgc" src="../../img/practic/1archi/55.png"/></td>
+<td>Включает и отключает отображение окна "Панорама". Если окно"Панорама" не содержит ни одного активного вида, эта функция недоступна.</td>
+</tr>
+<tr>
+<td><img id="imgc" src="../../img/practic/1archi/56.png"/></td>
+<td>Отображается окно справочной системы.</td>
+</tr>
+</table>
+	
+	
+	</div>
+			
+			
+			
+			
+			
+			
+<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>	
+			<nav id="practic">
+				<ul>											
+						<li><a href="../practic.html"><- Назад</a>
+							<li><a href="1-1.html">Архитектура Civil 3D </a></li>
+							<li><a href="1-2.html">Связи между объектами</a></li>
+							<li><a href="1-3.html">Элементы окна: Область инструментов</a></li>
+							<li><a href="1-4.html">Вкладка "Навигатор"</a></li>
+							<li><a href="1-5.html">Вкладка "Параметры"</a></li>
+							<li><a href="1-6.html">Вкладка "Съёмка"</a></li>
+							<li><a href="1-7.html">Вкладка "Панель инструментов"</a></li>
+							<li><a href="1-8.html">Интерфейс объектов</a></li>
+				</ul>					
+			</nav>
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

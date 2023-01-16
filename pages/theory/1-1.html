@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Описание ЦМР </title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet" 
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('nav#theor').mmenu({
+										extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false, 
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Цифровое моделирование рельефа'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+
+			<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTopo').fadeIn();
+				} else {
+				$('#toTopo').fadeOut();
+				}
+			});
+			$('#toTopo').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+</div>
+
+<div class="menur">
+	<div class="pager">		
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">	
+<h2>Описание ЦМР</h2>
+<p>Цифровое моделирование рельефа, как одна из важных моделирующих функций геоинформационных систем, включает две группы операций, первая из которых обслуживает решение задач создания модели рельефа, вторая — ее использование.</p>
+<img id="imgc" src="../../img/theory/4.jpg"/>
+<p>Под цифровой моделью рельефа (ЦМР) принято понимать средство цифрового представления трехмерных пространственных объектов (поверхностей, или рельефов) в виде трехмерных данных, образующих множество высотных отметок (отметок глубин) и иных значений аппликат (координаты Z) в узлах регулярной или нерегулярной сети или совокупность записей горизонталей (изогипс, изобат) или иных изолиний. 
+<br>Первые эксперименты по созданию ЦМР относятся к самым ранним этапам развития геоинформатики и автоматизированной картографии первой половины 60-х годов XX в. С тех пор разработаны методы и алгоритмы решения различных задач, созданы программные средства моделирования, крупные, в том числе национальные и глобальные, массивы данных о рельефе, накоплен опыт решения с их помощью разнообразных научных и прикладных задач. 
+
+<br>В проблематику создания ЦМР традиционно входят вопросы оценки источников данных о рельефе (в том числе их точности), выбора моделей пространственных данных для его описания, методы реализации модели применительно к решаемой задаче, верификация полученной модели. 
+</p>
+
+	
+	
+	</div>
+			
+			
+			
+				<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>			
+			
+			
+			
+			<nav id="theor">
+				<ul>											
+						<li><a href="../theory.html"><- Назад</a>
+						<li><a href="1-1.html">Описание ЦМР</a></li>
+						<li><a href="1-2.html">Источники данных для ЦМР</a></li>
+						<li><a href="1-3.html">Точность ЦМР</a></li>
+						<li><a href="1-4.html">Типы цифровых моделей рельефа </a></li>
+				</ul>					
+			</nav>
+		
+</div>
+	<DIV ID = "toTopo" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

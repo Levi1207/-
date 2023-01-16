@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Создание точек в местах с указанными координатами</title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet"
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+
+				<script type="text/javascript">
+			$(function() {
+				$('nav#practic').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false,
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Точки'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li class="active"><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">
+<h2>Создание точек в местах с указанными координатами</h2>
+<p>Точки можно создавать путем указания местоположения в активном чертеже. При создании точки местоположение в чертеже можно указать самыми разными способами, например, ввести значения координат в командной строке или нажать кнопку мыши на месте в чертеже.
+</p><p>В файле точки рельефа.dwg включите видимость слоя Растр, в результате на чертеже появится растровое изображение съемки местности.
+<img src="../../img/practic/3points/l4p1.png"/>
+</p><p>В окне Область инструментов на вкладке Навигатор щелкните правой кнопкой мыши на коллекции Точки. Выберите команду Создать. И разверните панель полностью.
+<img src="../../img/practic/3points/l3p1.png"/>
+</p><p>В категории Создание точек в списке Запрашивать отметки выберите опцию Вручную, в списках Запрашивать имена точек и Запрашивать описания — Автоматически, в поле Описание по умолчанию введите текст REL.
+<img src="../../img/practic/3points/l4p2.png"/>
+</p><p>На панели инструментов Создание точек разверните список команд, объединенных в группу Разное, и выберите пункт Вручную. 
+<img src="../../img/practic/3points/l4p3.png"/>
+</p><p>В ответ на запрос Civil 3D укажите местоположение точки в чертеже, для этого щелкните левой кнопкой мыши по растровому изображению точки. Введите отметку точки. 
+<img src="../../img/practic/3points/l4p4.png"/>
+<img src="../../img/practic/3points/l4p5.png"/>
+<img src="../../img/practic/3points/l4p6.png"/>
+</p><p>Аналогичным образом создайте все недостающие точки. Обновите группу точек Точки рельефа. 
+<img src="../../img/practic/3points/l3p11.png"/>
+<img src="../../img/practic/3points/l4p7.png"/>
+</p><p>Сохраните файл.</p> 
+</div>
+
+
+	<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>
+			<nav id="practic">
+				<ul>											
+						<li><a href="../practic.html"><- Назад</a>
+							<li><a href="3-1.html">Общие сведения о точках</a></li>
+							<li><a href="3-2.html">Создание ключей-описателей</a></li>
+							<li><a href="3-3.html">Создание групп точек</a></li>
+							<li><a href="3-4.html">Преобразование точек AutoCAD в точки AutoCAD Civil 3D</a></li>
+							<li><a href="3-5.html">Создание точек в местах с указанными координатами</a></li>
+							<li><a href="3-6.html">Импорт точек из файла базы данных MS Access </a></li>
+							<li><a href="3-7.html">Импорт точек из текстового файла</a></li>
+							<li><a href="3-8.html">Стили точек</a></li>
+							<li><a href="3-9.html">Метки точек</a></li>
+							<li><a href="3-10.html">Создание пользовательских свойств</a></li>
+							<li><a href="3-11.html">Назначение пользовательских свойств группам точек </a></li>
+							<li><a href="3-12.html">Запрос информации пользовательских свойств</a></li>
+				</ul>					
+			</nav>
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Импорт точек из файла базы данных MS Access</title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet"
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+
+				<script type="text/javascript">
+			$(function() {
+				$('nav#practic').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false,
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Точки'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li class="active"><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">
+<h2>Импорт точек из файла базы данных MS Access</h2>
+<p>В этом упражнении вам будет предложено импортировать точки из файла базы данных MS Access и отсортировать их по группам с помощью ключей-описателей. База данных точек представляет собой таблицу MS Access, содержащую индексы точек, их описание (коды), северное и восточное положение, отметки и другие данные. 
+</p>
+<ol><li>Создайте новый чертеж, сохраните его в папке Учебные файлы/Точки под именем импорт точек-1.dwg.
+</li><li>Согласно табл. создайте ключи-описатели для сортировки точек при их импорте в чертеж. Коды ключей-описателей должны соответствовать кодам точек в базе данных точек MS Access. 
+<img src="../../img/practic/3points/l5p7.png"/>
+<strong>Прим.</strong> Для добавления очередного кода в ключ-описатель необходимо в столбце Код щелкнуть правой кнопкой мыши на предыдущей записи и выбрать команду Создать. Запись формата в виде $* означает, что исходное описание точки копируется без изменений и используется для полного описания в метке точки. 
+</li><li>Для всех ключей-описателей снимите галочки в столбцах Стиль точки и Стиль метки точки (стили обозначения точки и ее метки будут определяться группой точек). 
+<img src="../../img/practic/3points/l5p1.png"/>
+</li><li>Для всех ключей-описателей укажите слой V-NODE-STRM. Создайте группы точек согласно таблице 
+<img src="../../img/practic/3points/l5p8.png"/>
+<img src="../../img/practic/3points/l5p2.png"/>
+<img src="../../img/practic/3points/l5p3.png"/>
+<img src="../../img/practic/3points/l5p4.png"/>
+</li><li>В окне Область инструментов на вкладке Навигатор нажмите правую кнопку мыши на элементе Точки. Выберите команду Создать. 
+</li><li>Разверните диалоговое окно Создание точек, для параметра Слой по умолчанию измените значение на V-NODE. 
+</li><li>В диалоговом окне Создание точек щелкните по пиктограмме <img style=" display: inline; vertical-align: -25px;"  src="../../img/practic/3points/l5p9.png"/>  (Импорт точек). 
+</li><li>В диалоговом окне Импорт точек в списке Формат выберите опцию Внешняя база данных точек проекта. 
+<img src="../../img/practic/3points/l5p5.png"/>
+</li><li>В области Исходный файл нажмите кнопку  <img style=" display: inline; vertical-align: -25px;"  src="../../img/practic/3points/l5p10.png"/> . Перейдите к папке Учебные файлы/Точки, выберите файл points.mdb и нажмите кнопку Открыть. Формат файла выберется автоматически после выбора файла.
+</li><li>В диалоговом окне Импорт точек снимите все флажки в группе Дополнительные параметры. Нажмите ОК. Выполняется импорт точек. 
+</li><li>Обновите группы точек. Убедитесь, что точки групп отображаются как на чертеже, так и в табличной форме в представлении списка в окне Область инструментов. 
+<img src="../../img/practic/3points/l5p6.png"/>
+</li><li>Сравните полученный результат с файлом импорт точек-1_1.dwg, расположенным в папке Учебные файлы/Точки/Результаты. 
+</li><li>Наведите в окне чертежа курсор на точку, в подсказке отображаются основные данные о точке. 
+</li><li>Сохраните файл.
+</li></ol>
+</div>
+
+
+	<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>
+			<nav id="practic">
+				<ul>											
+						<li><a href="../practic.html"><- Назад</a>
+							<li><a href="3-1.html">Общие сведения о точках</a></li>
+							<li><a href="3-2.html">Создание ключей-описателей</a></li>
+							<li><a href="3-3.html">Создание групп точек</a></li>
+							<li><a href="3-4.html">Преобразование точек AutoCAD в точки AutoCAD Civil 3D</a></li>
+							<li><a href="3-5.html">Создание точек в местах с указанными координатами</a></li>
+							<li><a href="3-6.html">Импорт точек из файла базы данных MS Access </a></li>
+							<li><a href="3-7.html">Импорт точек из текстового файла</a></li>
+							<li><a href="3-8.html">Стили точек</a></li>
+							<li><a href="3-9.html">Метки точек</a></li>
+							<li><a href="3-10.html">Создание пользовательских свойств</a></li>
+							<li><a href="3-11.html">Назначение пользовательских свойств группам точек </a></li>
+							<li><a href="3-12.html">Запрос информации пользовательских свойств</a></li>
+				</ul>					
+			</nav>
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

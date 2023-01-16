@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Создание групп точек</title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet"
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+
+				<script type="text/javascript">
+			$(function() {
+				$('nav#practic').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false,
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Точки'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li class="active"><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">
+<h2>Создание групп точек</h2>
+<p>Следующее задание посвящено созданию группы точек рельефа с использованием уже существующего ключа-описателя.
+</p><p>В файле точки рельефа.dwg в окне Область инструментов на вкладке Навигатор щелкните правой кнопкой мыши на коллекции Группы точек. Выберите команду Создать. Откроется окно «Свойства группы точек»
+<img src="../../img/practic/3points/l2p1.png"/>
+</p><p>В этом окне на вкладке Информация в поле Имя введите Точки рельефа, а в поле описание Все точки.
+<img src="../../img/practic/3points/l2p2.png"/>
+</p><p>Перейдите на вкладку Совпадение исходных описаний и выберите из списка REL*. Нажмите кнопку Применить. Тем самым задается, что все точки с исходным описанием REL* будут добавляться к группе точек Точки рельефа.
+<img src="../../img/practic/3points/l2p3.png"/>
+</p><p>Обратите внимание на то, что параметр ключа-описателя записывается, как на вкладке Включить, так и на вкладке Конструктор запросов. 
+<img src="../../img/practic/3points/l2p4.png"/>
+<img src="../../img/practic/3points/l2p5.png"/>
+</p><p>Перейдите на вкладку Информация, задайте стиль точки Стандартный, стиль метки точки Отметки.
+<img src="../../img/practic/3points/l2p6.png"/>
+</p><p>Нажмите ОК для закрытия диалогового окна Свойства группы точек.
+</p><p>Сохранитесь.
+</p><p>Как видите, теперь некоторые точки стали показываться.
+<img src="../../img/practic/3points/l2p7.png"/>
+</p>
+</div>
+
+
+	<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>
+			<nav id="practic">
+				<ul>											
+						<li><a href="../practic.html"><- Назад</a>
+							<li><a href="3-1.html">Общие сведения о точках</a></li>
+							<li><a href="3-2.html">Создание ключей-описателей</a></li>
+							<li><a href="3-3.html">Создание групп точек</a></li>
+							<li><a href="3-4.html">Преобразование точек AutoCAD в точки AutoCAD Civil 3D</a></li>
+							<li><a href="3-5.html">Создание точек в местах с указанными координатами</a></li>
+							<li><a href="3-6.html">Импорт точек из файла базы данных MS Access </a></li>
+							<li><a href="3-7.html">Импорт точек из текстового файла</a></li>
+							<li><a href="3-8.html">Стили точек</a></li>
+							<li><a href="3-9.html">Метки точек</a></li>
+							<li><a href="3-10.html">Создание пользовательских свойств</a></li>
+							<li><a href="3-11.html">Назначение пользовательских свойств группам точек </a></li>
+							<li><a href="3-12.html">Запрос информации пользовательских свойств</a></li>
+				</ul>					
+			</nav>
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

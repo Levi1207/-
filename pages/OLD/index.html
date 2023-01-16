@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>Главная страница</title>
+ <link href="style.css" rel="stylesheet"  type="text/css">
+ <meta charset="utf-8">
+ 	<link type="text/css" rel="stylesheet" href="dist/core/css/jquery.mmenu.all.css" />
+<link type="text/css" rel="stylesheet" href="css/demo.css" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="dist/core/js/jquery.mmenu.min.all.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('nav#menu').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow' ],
+					searchfield	: true,
+					counters	: true,
+					navbar 		: {
+						title		: 'Advanced menu'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [ 'searchfield' ]
+						}, {
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}, {
+							position	: 'bottom',
+							content		: [
+								'<a href="http://mmenu.frebsite.nl/wordpress-plugin.html" target="_blank">WordPress plugin</a>'
+							]
+						}
+					]
+				});
+			});
+		</script>
+</head>
+<body>
+<div class="header"><div>
+<a href="index.html">Моделирование землеустроительных работ</a><br>
+<a href="index.html">на базе инструментальной среды Autocad Civil 3D</a>
+</div></div>
+<div class="menu">
+<div class="headerr">
+				<a href="#menu"></a>
+				Demo
+			</div>
+<nav id="menu">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#about">About us</a>
+						<ul>
+							<li><a href="#about/history">History</a></li>
+							<li><a href="#about/team">The team</a>
+								<ul>
+									<li><a href="#about/team/management">Management</a></li>
+									<li><a href="#about/team/sales">Sales</a></li>
+									<li><a href="#about/team/development">Development</a></li>
+								</ul>
+							</li>
+							<li><a href="#about/address">Our address</a></li>
+						</ul>
+					</li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+
+<div class="page">
+  <ul>
+    <li class="active"><a href="index.html">Главная</a></li>
+    <li><a href="pages/theory.html">Теория</a></li>
+    <li><a href="pages/practic.html">Практика</a></li>
+	<li><a href="pages/glossary.html">Глоссарий</a></li>
+    <li><a href="pages/test.html">Тестирование</a></li>
+	<li><a href="pages/litruche.html">Литература</a></li>
+    <li><a href="pages/link.html">Ссылки</a></li>
+  </ul>
+</div>
+</div>
+<div class="fullwidth">
+<h2>Введение</h2>
+<img src="img/main_page_img.jpg" alt="asd"/><br>
+<p>
+Информационная обучающая система «Моделирование землеустроительных работ на базе инструментальной среды AutoCAD Civil 3D» содержит описание наиболее распространённых задач, решаемых с помощью программы Autodesk AutoCAD Civil 3D, является базой для дальнейшего изучения и предназначена для получения практических навыков в проектировании и моделировании линейных объектов и поверхностей. 
+</p>
+<a class="link" href="pages/aboutAC.html">Возможности AutoCAD Civil 3D </a>
+</div>
+
+
+<footer>
+<div class="footer">Copyright (c) 2015</div>
+</footer>
+</body>
+</html>

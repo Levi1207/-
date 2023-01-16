@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Запрос информации пользовательских свойств </title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet"
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+
+				<script type="text/javascript">
+			$(function() {
+				$('nav#practic').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false,
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Точки'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li class="active"><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">
+<h2>Запрос информации пользовательских свойств </h2>
+<p>Используя пользовательские свойства точек, можно создать новую группу точек. Список точек, включенных в эту группу, будет определяться запросом, который содержит пользовательские свойства. 
+</p>
+<ol><li>Продолжайте работу с файлом из предыдущего упражнения <i>скважины.dwg</i>, на вкладке Навигатор создайте новую группу точек под названием <i>«Скважины глубиной < 6 м»</i>. 
+<img src="../../img/practic/3points/l11p1.png"/>
+</li><li>В окне Свойства группы точек на вкладке Конструктор запросов выберите опцию Изменить запрос. 
+</li><li>Нажмите правую кнопку мыши на таблице Построитель запросов. Выберите команду Вставить строку. 
+<img src="../../img/practic/3points/l11p2.png"/>
+</li><li>В столбце Свойство из списка выберите пользовательское свойство Глубина. 
+</li><li>В списке Оператор выберите знак < (меньше чем). 
+</li><li>В ячейку столбца Значение введите число 6. Нажмите кнопку Применить.
+<img src="../../img/practic/3points/l11p3.png"/>
+</li><li>Перейдите на вкладку Список точек. Просмотрите данные точек списка, убедитесь, что глубина скважин отобранных точек действительно меньше 6 метров.
+<img src="../../img/practic/3points/l11p4.png"/>
+</li><li>На вкладке Информация задайте стиль точек Геологическая скважина. Нажмите ОК. 
+</li><li>На основе стиля метки Данные скважины создайте стиль метки Скважина глубиной < 6 м. Выделите другим цветом или шрифтом свойство Глубина. 
+<img src="../../img/practic/3points/l11p5.png"/>
+</li><li>Назначьте созданный стиль метки группе точек Скважины глубиной менее 6 м.
+<img src="../../img/practic/3points/l11p6.png"/>
+<img src="../../img/practic/3points/l11p7.png"/>
+</li><li>Сравните полученный результат с файлом скважины_3.dwg, расположенным в папке Учебные файлы/Точки/Результаты. 
+</li><li>Сохраните файл. 
+</li></ol>
+
+</div>
+
+
+	<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>
+			<nav id="practic">
+				<ul>											
+						<li><a href="../practic.html"><- Назад</a>
+							<li><a href="3-1.html">Общие сведения о точках</a></li>
+							<li><a href="3-2.html">Создание ключей-описателей</a></li>
+							<li><a href="3-3.html">Создание групп точек</a></li>
+							<li><a href="3-4.html">Преобразование точек AutoCAD в точки AutoCAD Civil 3D</a></li>
+							<li><a href="3-5.html">Создание точек в местах с указанными координатами</a></li>
+							<li><a href="3-6.html">Импорт точек из файла базы данных MS Access </a></li>
+							<li><a href="3-7.html">Импорт точек из текстового файла</a></li>
+							<li><a href="3-8.html">Стили точек</a></li>
+							<li><a href="3-9.html">Метки точек</a></li>
+							<li><a href="3-10.html">Создание пользовательских свойств</a></li>
+							<li><a href="3-11.html">Назначение пользовательских свойств группам точек </a></li>
+							<li><a href="3-12.html">Запрос информации пользовательских свойств</a></li>
+				</ul>					
+			</nav>
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

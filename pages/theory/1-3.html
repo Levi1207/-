@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Точность ЦМР</title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet" 
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('nav#theor').mmenu({
+										extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false, 
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Цифровое моделирование рельефа'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+			
+			<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+</div>
+
+<div class="menur">
+	<div class="pager">		
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">	
+<h2>Точность ЦМР</h2>
+<p>
+Точность, как одна из важных характеристик качества модели, может быть оценена либо ее соответствием условно-истинному «оригиналу», либо релевантностью тем задачам, которые будут решаться в процессе использования модели. Первый из подходов, как будет показано ниже на реальных примерах, основан на контроле точности ЦМР по выборочным оценкам их среднеквадратических погрешностей и соответствию стандартам качества. Тот и другой подход одинаково полезен и в случае проектирования вновь создаваемой ЦМР, и при оценке возможностей использования уже существующей. Как и всякая модель, ЦМР не может быть оценена в категориях истинности, но к ней приложимо понятие работоспособности. 
+<br>
+Среди факторов, обусловливающих интегральную итоговую точность ЦМР, можно назвать характер и точность источника исходных данных, технологию аналого-цифрового преобразования данных, если используется источник аналогового типа (например, карта) со своими погрешностями, точность восстановления функции высоты при преобразовании хаотически упорядоченных множеств высотных отметок в их регулярный набор (например, точность процедур интерполяции), тип и параметры модели данных, используемой при создании ЦМР (например, шага регулярной модели высот, т.е. ее пространственного разрешения). Ниже будут приведены оценки точности некоторых конкретных моделей. Точность ЦМР, как функция амплитуды, сложности, расчленности и иных интегральных морфометрических характеристик рельефа, в конечном итоге — их морфологических типов, исследована недостаточно, и это большой недостаток всей методологии и индустрии создания и использования ЦМР в целом.
+
+
+</p>
+
+	
+	
+	</div>
+			
+			
+			
+			
+					
+	<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>		
+			
+			
+				<nav id="theor">
+				<ul>											
+						<li><a href="../theory.html"><- Назад</a>
+						<li><a href="1-1.html">Описание ЦМР</a></li>
+						<li><a href="1-2.html">Источники данных для ЦМР</a></li>
+						<li><a href="1-3.html">Точность ЦМР</a></li>
+						<li><a href="1-4.html">Типы цифровых моделей рельефа </a></li>
+				</ul>					
+			</nav>
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Стили точек</title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet"
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+
+				<script type="text/javascript">
+			$(function() {
+				$('nav#practic').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false,
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Точки'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li class="active"><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">
+<h2>Стили точек</h2>
+<p>Стили точек управляют тем, как знаки точек отображаются в чертеже. С параметрами стилей точек работают так же, как и со всеми стилями объектов AutoCAD Civil 3D, используя дерево вкладки Параметры в окне Область инструментов.
+</p><p>При определении стиля точек можно выбрать знак точки из набора знаков по умолчанию или создать знак точки с помощью блока AutoCAD.
+</p><p>Стиль для точки чертежа можно назначить либо во время создания точки, либо во время ее импорта. Чтобы изменить стиль точек, используйте представление списка точек на вкладке Навигатор или окно Редактор точек.
+</p><p>На вкладке Параметры Civil 3D предоставляет ряд возможностей работы со стилями точек.
+</p>
+<ul><li>Создание нового стиля точек — стиль точек определяет знак, который отображается в чертеже на месте координат X и Y, сопоставленных точке. Стиль может также определять масштаб знака и его внешний вид в ЗD-видах.
+</li><li>Создание стиля точек на основе существующего стиля точек — стиль точек создается из существующего стиля путем копирования существующего стиля точек и последующего изменения копии.
+</li><li>Редактирование стиля точек — внесение изменений в параметры стиля точек. При редактировании стиля точки все обозначения точек этого стиля в чертеже обновляются автоматически.
+</li><li>Удаление стиля точек.
+</li></ul>
+<p>В упражнении вы создадите новый стиль точек на базе имеющегося стиля и примените его к группе точек.
+</p>
+<ol><li>Продолжайте работу с файлом <i>импорт точек-1.dwg</i> или откройте <i>импорт точек-1с.dwg</i>, на вкладке Параметры разверните коллекцию Точка, далее коллекцию Стили точек. 
+</li><li>Щелкните правой кнопкой мыши на имени коллекции Стили точек, выберите команду Создать. 
+<img src="../../img/practic/3points/l7p1.png"/>
+</li><li>В диалоговом окне Стиль точки на вкладке Информация в поле Имя введите название нового стиля Точка водоема.
+<img src="../../img/practic/3points/l7p2.png"/>
+</li><li>Перейдите на вкладку Маркер, где выберите стиль нестандартного обозначения, показанный на изображении ниже как «+» . При необходимости для обозначения точек можно использовать символы блоков AutoCAD, содержащиеся в шаблоне чертежа. В качестве размера обозначения точки выберите опцию «Исп. размер в абсолютных единицах», укажите размер обозначения — 2м. Затем нажмите «ОК».
+<img src="../../img/practic/3points/l7p3.png"/>
+</li><li>Перейдите на вкладку Навигатор, разверните коллекцию Группы точек, щелкните правой кнопкой мыши по группе точек Противопаводковый водоем, выберите команду Свойства.
+Выберите стиль точки Точка водоема, нажмите ОК.
+<img src="../../img/practic/3points/l7p4.png"/>
+<img src="../../img/practic/3points/l7p5.png"/>
+</li><li>Сохраните файл.
+</li></ol>
+</div>
+
+
+	<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>
+			<nav id="practic">
+				<ul>											
+						<li><a href="../practic.html"><- Назад</a>
+							<li><a href="3-1.html">Общие сведения о точках</a></li>
+							<li><a href="3-2.html">Создание ключей-описателей</a></li>
+							<li><a href="3-3.html">Создание групп точек</a></li>
+							<li><a href="3-4.html">Преобразование точек AutoCAD в точки AutoCAD Civil 3D</a></li>
+							<li><a href="3-5.html">Создание точек в местах с указанными координатами</a></li>
+							<li><a href="3-6.html">Импорт точек из файла базы данных MS Access </a></li>
+							<li><a href="3-7.html">Импорт точек из текстового файла</a></li>
+							<li><a href="3-8.html">Стили точек</a></li>
+							<li><a href="3-9.html">Метки точек</a></li>
+							<li><a href="3-10.html">Создание пользовательских свойств</a></li>
+							<li><a href="3-11.html">Назначение пользовательских свойств группам точек </a></li>
+							<li><a href="3-12.html">Запрос информации пользовательских свойств</a></li>
+				</ul>					
+			</nav>
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

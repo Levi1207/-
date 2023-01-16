@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Создание ключей-описателей</title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet"
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+
+				<script type="text/javascript">
+			$(function() {
+				$('nav#practic').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false,
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Точки'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li class="active"><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">
+<h2>Создание ключей-описателей</h2>
+<p>Из папки Учебные файлы/Точки откройте файл точки рельефа.dwg. Данный файл содержит векторный вариант съёмки рельефа.
+<img src="../../img/practic/3points/l1p1.png"/>
+</p><p>В окне Область инструментов на вкладке Параметры разверните коллекцию Точка. Нажмите правую кнопку мыши на элементе Наборы ключей-описателей, выберите команду Создать. 
+<img src="../../img/practic/3points/l1p2.png"/>
+</p><p>В диалоговом окне Набор ключей-описателей в поле Имя введите содержательное имя для нового набора, например, Ключи точек рельефа. А в поле Описание введите короткое описание, например Точки существующей поверхности. Нажмите ОК. Создается новый ключ-описатель. 
+<img src="../../img/practic/3points/l1p3.png"/>
+</p><p>На вкладке Параметры разверните коллекцию Наборы ключей-описателей. Нажмите правую кнопку мыши на элементе Ключи точек рельефа и выберите команду Редактировать ключи.
+<img src="../../img/practic/3points/l1p4.png"/>
+</p><p>В открывшемся окне Панорама отобразится Редактор ключей-описателей. В Редакторе ключей-описателей впоследствии будут введены коды исходных описаний и определено, как AutoCAD Civil 3D обработает новые точки с данными кодами. Все записи в столбце Код Редактора ключей-описателей учитывают регистр клавиатуры.
+<img src="../../img/practic/3points/l1p5.png"/>
+</p><p>На вкладке Редактор ключей-описателей двойным нажатием кнопки мыши выделите ячейку в столбце Код и измените ее на REL*. Звездочка является групповым символом, поэтому все импортируемые точки, код описания которых начинается строкой REL, после которой следуют любые другие символы, будут обрабатываться в соответствии с параметрами этой строки таблицы. 
+<img src="../../img/practic/3points/l1p6.png"/>
+</p><p>В столбцах Стиль и Стиль метки точки снимите флажки активности этих параметров. Снятие данных флажков позволит управлять этими параметрами с помощью свойств группы точек. 
+<img src="../../img/practic/3points/l1p7.png"/>
+</p><p>В столбце Формат введите полное описание в метке точки RELIEF. Затем установите флажок в столбце Слой. 
+<img src="../../img/practic/3points/l1p8.png"/>
+</p><p>Дважды щелкните по пустому пространству ячейки «Слой» для открытия диалогового окна Выбор слоя. В диалоговом окне Выбор слоя выберите V-NODE-STRM. Нажмите ОК. Данный параметр означает, что точки REL будут обращаться за атрибутами отображения к слою V-NODE-STRM. 
+<img src="../../img/practic/3points/l1p9.png"/>
+</p><p>Нажмите галочку (<img style=" display: inline; vertical-align: -20px;"  src="../../img/practic/3points/l1p10.png"/> ), чтобы сохранить ключи-описатели и закрыть редактор. 
+</p><p>Сохраните файл.
+</p>
+</div>
+
+
+	<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>
+			<nav id="practic">
+				<ul>											
+						<li><a href="../practic.html"><- Назад</a>
+							<li><a href="3-1.html">Общие сведения о точках</a></li>
+							<li><a href="3-2.html">Создание ключей-описателей</a></li>
+							<li><a href="3-3.html">Создание групп точек</a></li>
+							<li><a href="3-4.html">Преобразование точек AutoCAD в точки AutoCAD Civil 3D</a></li>
+							<li><a href="3-5.html">Создание точек в местах с указанными координатами</a></li>
+							<li><a href="3-6.html">Импорт точек из файла базы данных MS Access </a></li>
+							<li><a href="3-7.html">Импорт точек из текстового файла</a></li>
+							<li><a href="3-8.html">Стили точек</a></li>
+							<li><a href="3-9.html">Метки точек</a></li>
+							<li><a href="3-10.html">Создание пользовательских свойств</a></li>
+							<li><a href="3-11.html">Назначение пользовательских свойств группам точек </a></li>
+							<li><a href="3-12.html">Запрос информации пользовательских свойств</a></li>
+				</ul>					
+			</nav>
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

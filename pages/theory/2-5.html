@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Аналитическая отмывка рельефа</title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet" 
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('nav#theor').mmenu({
+										extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false, 
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Применение ЦМР '
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+
+			<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+</div>
+
+<div class="menur">
+	<div class="pager">		
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">	
+<h2>Аналитическая отмывка рельефа</h2>
+<p>Автоматизация светотеневой отмывки рельефа - наиболее пластического и широко распространенного способа картографического изображения рельефа на средне- и мелкомасштабных топографических и общегеографических картах в сочетании с гипсометрической его характеристикой или изображением в горизонталях (изобатах) - одна из прикладных задач, поставленных и решенных уже в первых экспериментах по обработке ЦМР в 60-х годах XX в., в условиях использования современных программных средств ГИС стала вполне рутинной процедурой. Ее реализация основана на расчете относительных освещенностей склонов, точнее участков склонов, "элементарных склонов", образованных треугольными гранями модели TIN или плоскостями ячеек матрицы высот. Освещенность вычисляется по формуле:</p>
+<img id="imgc" src="../../img/theory/22.bmp"/>
+<p>Обычно источник помещают на северо-западе, как это принято при ручном исполнении отмывки рельефа. Автоматизированный режим расчета освещенностей и визуализации полученной картины позволяет оптимизировать пространственное положение искусственного источника, сообразуясь с морфологическим типом рельефа и морфологией конкретного участка местности для достижения наглядности и пластичности изображения. Эффект пластичности может быть значительно усилен при использовании двух точечных источников освещения (синтеза эффекта бокового и вертикального освещения), а также путем дополнительной имитации рассеянного освещения. Помимо этого, высокореалистичное (фотореалистичное) изображение рельефа, в особенности высокогорного, в том числе альпийского, требует учета отражательного эффекта склонов, генерации и коррекции теней. Современные методы аналитической отмывки рельефа интерактивны, способны имитировать мельчайшие детали "ручного" ее исполнения, например, путем интерактивной локальной коррекции освещенности участка, сообразуясь с его морфологическими особенностями.</p>
+<img id="imgc" src="../../img/theory/23.bmp"/>
+	
+	
+	</div>
+			
+			
+			
+		<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>					
+			
+			
+			
+			<nav id="theor">
+				<ul>											
+							<li><a href="../theory.html"><- Назад</a>
+							<li><a href="2-1.html">Использование ЦМР</a></li>
+							<li><a href="2-2.html">Расчет углов наклона и экспозиций склонов</a></li>
+							<li><a href="2-3.html">Оценка формы склонов</a></li>
+							<li><a href="2-4.html">Генерация сети тальвегов и водоразделов</a></li>
+							<li><a href="2-5.html">Аналитическая отмывка рельефа</a></li>
+							<li><a href="2-6.html">Трехмерное представление рельефа</a></li>
+							<li><a href="2-7.html">Анализ видимости/невидимости</a></li>
+							<li><a href="2-8.html">Интерполяция</a></li>
+				</ul>					
+			</nav>			
+			
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

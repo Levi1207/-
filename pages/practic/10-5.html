@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Именование элементов конструкций (PKT)</title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet" 
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+
+				<script type="text/javascript">
+			$(function() {
+				$('nav#practic').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false, 
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Наименование объектов'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+					<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">		
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li class="active"><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">	
+<h2>Именование элементов конструкций (PKT)</h2>
+<p>Для именования элементов конструкций используются три вида имён:
+</p>
+<ol>
+	<li>имена в строке «Subassembly Name» в Subassembly Composer (SAC);</li> 
+	<li>имена в названии файлов PKT;</li>  
+	<li>имена в инструментальной палитре в AutoCAD Civil 3D.</li> 
+</ol> 
+<p>Для всех трёх видов имён рекомендуется использовать один и тот же тип именования (Базовое имя), но с учётом технических особенностей. 
+</p><p>Структура присвоения базового имени выглядит следующим образом: 
+</p>
+<img id="imgc" src="../../img/practic/10naim/6.png"/>
+<img id="imgc" src="../../img/practic/10naim/7.png"/>
+<ol>
+<li>Для имён в строке «Subassembly Name» в SAC (вкладка «Packet Settings») базовое имя должно быть изменено в соответствии с техническими ограничениями SAC. В частности, не допускается использования пробелов, точек, запятых и т.п. Поэтому в базовом имени необходимо исключить пробелы и каждое слово начинать с заглавной буквы: 
+</li>
+<p><b>Пример:</b> ВыходНаРельефСКюветом_v001</p>
+<br>
+<li>Для имён файлов PKT имеются ограничения, накладываемые только операционной системой. Соответственно, допускается использование базового имени, без изменений:</li>
+<p><b>Пример:</b> Выход на рельеф с кюветом_v001</p>
+<br>
+<li>Для имён в инструментальной палитре AutoCAD Civil 3D по умолчанию наследуются имена из строки «Subassembly Name» в SAC. Для максимальной наглядности и читаемости рекомендуется изменять имена в инструментальной палитре на базовое имя: </li>
+<p><b>Пример:</b> Выход на рельеф с кюветом_v001</p>
+</ol>
+	
+	</div>
+			
+			
+			
+			
+			
+			
+<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>	
+			<nav id="practic">
+				<ul>											
+						<li><a href="../practic.html"><- Назад</a>
+							<li><a href="10-1.html">Именование поверхностей</a></li>
+							<li><a href="10-2.html">Именование коридоров</a></li>
+							<li><a href="10-3.html">Именование трасс</a></li>
+							<li><a href="10-4.html">Именование профилей</a></li>
+							<li><a href="10-5.html">Именование элементов конструкций (PKT)</a></li>
+				</ul>					
+			</nav>
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

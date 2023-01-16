@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Задачи </title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet" 
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('nav#theor').mmenu({
+										extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false, 
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'ГИС и геология'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+
+			<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">		
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">	
+<h2>Задачи </h2>
+<p>
+Типы пространственных задач, которые решаются в геологии с применением геоинформационных систем, можно с достаточной степенью условности разделить на пять групп:
+</p>
+<ol id="ululu">
+<li>Создание всех видов собственно геологических и тематических карт.
+</li>
+<li>ешение задач геологического прогнозирования.
+</li>
+<li>Создание карт распределения геологической продукции и информации: а) по административным районам; б) по геологическим структурам.
+</li>
+<li>Создание двумерных и трехмерных моделей подсчета запасов полезных ископаемых и карт в изолиниях.
+</li>
+<li>Мониторинг различных аспектов геологической среды.
+</li>
+</ol>
+<p>
+Все эти виды задач различаются по целям, содержательному наполнению и используемому программному обеспечению. 
+</p>
+	
+	
+	</div>
+			
+			
+			
+			<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>				
+			
+			
+			
+			<nav id="theor">
+				<ul>											
+						<li><a href="../theory.html"><- Назад</a>
+							<li><a href="3-1.html">Задачи</a></li>
+							<li><a href="3-2.html">Геологическая съемка</a></li>
+							<li><a href="3-3.html">Геологические карты</a></li>
+							<li><a href="3-4.html">Карты изолиний</a></li>
+							<li><a href="3-5.html">Дистанционное зондирование</a></li>
+							<li><a href="3-6.html">Практическое применение</a></li>
+				</ul>					
+			</nav>	
+			
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

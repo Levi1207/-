@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Изменение стиля профиля </title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet"
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+
+				<script type="text/javascript">
+			$(function() {
+				$('nav#practic').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false,
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Профили'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li class="active"><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">
+<h2>Изменение стиля профиля </h2>
+<p>
+В данном упражнении меняется стиль профиля двумя различными способами. Сначала глобально меняется стиль профиля, что изменяет внешний вид профиля на всех видах профиля. Затем будет показан порядок переопределения стиля профиля на одном виде профиля. В итоге скрываются смещенные профили и их метки. 
+</p>
+<ol><li>Продолжим работу с файлом из предыдущего упражнения. В файле <i>npoфиль.dwg</i> выделите созданный нами вид профиля, а затем щелкните ПКМ по сетке вида профиля Гребень дороги со смещениями. Из контекстного меню выберите команду Свойства вида профиля. 
+<img src="../../img/practic/6prof/l3p1.png"/>
+</li><li>В диалоговом окне Свойства вида профиля на вкладке Информация в списке Стиль объекта выберите стиль вида профиля Усеченная сетка. Нажмите кнопку Применить, обратите внимание, как изменился вид профиля. 
+<img src="../../img/practic/6prof/l3p2.png"/>
+</li><li>Перейдите на вкладку Профили. 
+</li><li>В таблице в столбце Стиль дважды щелкните на ячейке для профиля Смещение влево, измените стиль профиля, выбрав стиль Профиль поверхности. Нажмите ОК
+<img src="../../img/practic/6prof/l3p3.png"/>
+</li><li>Нажмите ОК для закрытия окна Свойства вида профиля. Смещенный влево профиль имеет такой же цвет, как профиль осевой дороги. 
+<img src="../../img/practic/6prof/l3p4.png"/>
+</li></ol>
+
+<h2>На следующих этапах будет продемонстрирован другой способ изменения стиля профиля. </h2>
+<ol><li>На виде профиля Гребень дороги со смещениями щелкните правой кнопкой мыши по профилю Смещение вправо, предварительно выделив его, затем из контекстного меню выберите Свойства профиля. 
+<img src="../../img/practic/6prof/l3p5.png"/>
+</li><li>На вкладке Информация можно изменить свойства линии профиля после того как он построен на виде профиля. <br>
+Измените стиль профиля на Проектный - один цвет. Нажмите ОК. 
+<img src="../../img/practic/6prof/l3p6.png"/>
+</li><li>Сравните результат с файлом <i>профиль_2.dwg</i>, расположенным в папке <i>Учебные файлы/Профили/Результаты</i>. 
+<img src="../../img/practic/6prof/l3p7.png"/>
+</li><li>Сохраните файл. 
+</li></ol>
+</div>
+
+
+<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>
+			<nav id="practic">
+				<ul>											
+						<li><a href="../practic.html"><- Назад</a>
+							<li><a href="6-1.html">Объект Профиль</a></li>
+							<li><a href="6-2.html">Создание и отображение профилей поверхностей </a></li>
+							<li><a href="6-3.html">Изменение стиля профиля </a></li>
+							<li><a href="6-4.html">Просмотр характеристик профиля </a></li>
+							<li><a href="6-5.html">Быстрое построение профиля </a></li>
+							<li><a href="6-6.html">Создание профиля компоновки </a></li>
+							<li><a href="6-7.html">Редактирование профиля компоновки </a></li>
+							<li><a href="6-8.html">Копирование профиля компоновки </a></li>
+							<li><a href="6-9.html">Редактирование стиля вида профиля </a></li>
+							<li><a href="6-10.html">Создание и редактирование меток профиля </a></li>
+							<li><a href="6-11.html">Редактирование области данных вида профиля </a></li>
+							<li><a href="6-12.html">Разделение вида профиля </a></li>
+							<li><a href="6-13.html">Создание нескольких видов профилей </a></li>
+				</ul>					
+			</nav>
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

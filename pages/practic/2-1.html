@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Работа с чертежами</title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet"
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+
+				<script type="text/javascript">
+			$(function() {
+				$('nav#practic').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false,
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Работа с чертежами '
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li class="active"><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">
+<h2>Работа с чертежами</h2>
+
+<h3>Чтобы создать новый чертеж</h3>
+<p>Новый чертеж создается при помощи стандартных команд AutoCAD.</p>
+<ol><li>Нажмите кнопку <img style=" display: inline; vertical-align: -25px;"  src="../../img/practic/2cherteji/13.png"/> -> Создать.
+</li><li>В диалоговом окне "Выбор шаблона" выберите шаблон, на основе которого будет создан чертеж, и нажмите "Открыть".
+</li></ol>
+
+<h3>Чтобы открыть существующий чертеж:</h3>
+<p>Чтобы открыть существующий чертеж, воспользуйтесь стандартными командами AutoCAD.
+</p><p>Если открыто несколько чертежей, имя активного чертежа отображается в дереве"Навигатор" жирным шрифтом.
+</p><p><strong>Прим.:</strong> Для смены активного чертежа нажмите правую кнопку мыши на имени чертежа в главном представлении дерева "Навигатор", затем выберите "Перейти".
+</p>
+<ol><li>Нажмите кнопку <img style=" display: inline; vertical-align: -25px;"  src="../../img/practic/2cherteji/13.png"/> -> Создать.
+</li><li>В диалоговом окне "Выбрать файл" откройте содержащую чертеж папку, выберите чертеж и нажмите "Открыть".
+</li></ol>
+
+<h3>Доступ к файлам примеров</h3>
+<p>Файлы примеров доступны в меню приложения.</p>
+<p>В меню приложения выберите команду "Открыть" -> "Файлы примеров", а затем выберите одну из следующих команд:</p>
+<ul><li>Установленные файлы примеров: отображение папки "Файлы примеров" в диалоговом окне "Выбор файла".
+</li><li>Интерактивные файлы примеров: открытие интерактивной веб-страницы файлов примеров для AutoCAD.
+</li></ul>
+
+<h3>Использование шаблонов чертежа</h3>
+<ol><li>На вкладке "Навигатор" окна "Область инструментов" выберите "Главное представление" из раскрывающегося списка.
+<img src="../../img/practic/2cherteji/12.png"/>
+</li><li>Разверните коллекцию "Шаблоны чертежа" и щелкните правой кнопкой мыши на шаблоне:
+<ul><li>Создать новый чертеж на основе шаблона.
+</li><li>Открыть шаблон.
+</li></ul>
+</li></ol>
+
+<h3>Создание файла шаблона чертежа из существующего чертежа</h3>
+<ol><li>Нажмите кнопку <img style=" display: inline; vertical-align: -25px;"  src="../../img/practic/2cherteji/13.png"/> -> Создать.
+</li><li>В диалоговом окне "Выбор файла" выберите файл, который требуется использовать в качестве шаблона.
+</li><li>Нажмите "OK".
+</li><li>Нажмите кнопку <img style=" display: inline; vertical-align: -25px;"  src="../../img/practic/2cherteji/13.png"/> -> Сохранить как.
+</li><li><p>В диалоговом окне "Сохранение чертежа" в поле "Тип файла" выберите тип файла для шаблона чертежа.</p>
+<p>DWT-файлы должны сохраняться в формате файла чертежа текущей версии программы. Чтобы создать файл DWT в формате предыдущей версии, сохраните данный файл в требуемом формате DWG, а затем переименуйте файл DWG, используя расширение DWT.</p>
+</li><li>В поле "Имя файла" введите имя шаблона.
+</li><li>Нажмите "Сохранить".
+</li><li>Введите описание шаблона.
+</li><li>Нажмите "OK".
+</li></ol>
+
+	</div>
+
+
+	<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>
+
+			<nav id="practic">
+				<ul>											
+							<li><a href="../practic.html"><- Назад</a>
+							<li><a href="2-1.html">Работа с чертежами</a></li>
+							<li><a href="2-2.html">Наследование и переопределение параметров</a></li>
+							<li><a href="2-3.html">Указание параметров уровня объекта</a></li>
+							<li><a href="2-4.html">Указание параметров уровня чертежа</a></li>
+				</ul>					
+			</nav>
+
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

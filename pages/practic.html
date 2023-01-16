@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Практика</title>
+
+		<link type="text/css" rel="stylesheet" href="../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet" 
+      media="all and (min-width: 1024px)" />
+	  
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../dist/core/js/jquery.mmenu.min.all.js"></script>
+	
+		<script type="text/javascript">
+			$(function() {
+				$('nav#practic').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+						onClick : {
+						close: false, 
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Навигация'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title'
+							]
+						}
+					]
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">		
+	<ul>
+		<li ><a href="../index.html">Главная</a></li>
+		<li ><a href="theory.html">Теория</a></li>
+		<li class="active"><a href="practic.html">Практика</a></li>
+		<li ><a href="glossary.html">Глоссарий</a></li>
+		<li><a href="test.html">Тестирование</a></li>
+		<li ><a href="litruche.html">Литература</a></li>
+		<li ><a href="link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">
+	
+	
+<h2>Практика</h2>
+<img src="../img/mpract.png" alt="Практика"/>
+<p>
+Раздел Практика включает в себя разделы, необходимые для полного понимания студентом проходимой дисциплины. <br>
+Включает в себя разделы об архитектуре AutoCAD Civil 3D, о работе в нем с чертежами, точками, поверхностями, трассами, профилями и участками.
+
+</p>
+</div>
+
+<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>		
+			
+</div>
+			<nav id="practic">
+				<ul>
+					<li><a >Архитектура Civil 3D </a>
+						<ul>
+							<li><a href="practic/1-1.html">Архитектура Civil 3D </a></li>
+							<li><a href="practic/1-2.html">Связи между объектами</a></li>
+							<li><a href="practic/1-3.html">Элементы окна: Область инструментов</a></li>
+							<li><a href="practic/1-4.html">Вкладка "Навигатор"</a></li>
+							<li><a href="practic/1-5.html">Вкладка "Параметры"</a></li>
+							<li><a href="practic/1-6.html">Вкладка "Съёмка"</a></li>
+							<li><a href="practic/1-7.html">Вкладка "Панель инструментов"</a></li>
+							<li><a href="practic/1-8.html">Интерфейс объектов</a></li>
+						</ul>					
+					</li>
+					<li><a >Работа с чертежами </a>
+						<ul>
+							<li><a href="practic/2-1.html">Работа с чертежами</a></li>
+							<li><a href="practic/2-2.html">Наследование и переопределение параметров</a></li>
+							<li><a href="practic/2-3.html">Указание параметров уровня объекта</a></li>
+							<li><a href="practic/2-4.html">Указание параметров уровня чертежа</a></li>
+						</ul>
+					</li>
+					<li><a >Точки</a>
+						<ul>
+							<li><a href="practic/3-1.html">Общие сведения о точках</a></li>
+							<li><a href="practic/3-2.html">Создание ключей-описателей</a></li>
+							<li><a href="practic/3-3.html">Создание групп точек</a></li>
+							<li><a href="practic/3-4.html">Преобразование точек AutoCAD в точки AutoCAD Civil 3D</a></li>
+							<li><a href="practic/3-5.html">Создание точек в местах с указанными координатами</a></li>
+							<li><a href="practic/3-6.html">Импорт точек из файла базы данных MS Access </a></li>
+							<li><a href="practic/3-7.html">Импорт точек из текстового файла</a></li>
+							<li><a href="practic/3-8.html">Стили точек</a></li>
+							<li><a href="practic/3-9.html">Метки точек</a></li>
+							<li><a href="practic/3-10.html">Создание пользовательских свойств</a></li>
+							<li><a href="practic/3-11.html">Назначение пользовательских свойств группам точек </a></li>
+							<li><a href="practic/3-12.html">Запрос информации пользовательских свойств</a></li>
+						</ul>					
+					</li>
+					<li><a >Поверхности</a>
+						<ul>
+							<li><a href="practic/4-1.html">Общие сведения о поверхностях</a></li>
+							<li><a href="practic/4-2.html">Создание поверхности </a></li>
+							<li><a href="practic/4-3.html">Добавление групп точек к описанию поверхности </a></li>
+							<li><a href="practic/4-4.html">Структурные линии поверхности </a></li>
+							<li><a href="practic/4-5.html">Добавление структурных линий </a></li>
+							<li><a href="practic/4-6.html">Границы </a></li>
+							<li><a href="practic/4-7.html">Создание границы </a></li>
+							<li><a href="practic/4-8.html">Создание поверхности на основе горизонталей</a></li>
+							<li><a href="practic/4-9.html">Добавление данных точек </a></li>
+							<li><a href="practic/4-10.html">Перестановка рёбер </a></li>
+							<li><a href="practic/4-11.html">Удаление линий TIN</a></li>
+							<li><a href="practic/4-12.html">Сглаживание поверхности</a></li>
+							<li><a href="practic/4-13.html">Метки горизонталей</a></li>
+							<li><a href="practic/4-14.html">Метки высотной отметки точки </a></li>
+							<li><a href="practic/4-15.html">Метки откоса</a></li>
+							<li><a href="practic/4-16.html">Анализ водосборов поверхности </a></li>
+							<li><a href="practic/4-17.html">Вычерчивание стоков воды  </a></li>
+							<li><a href="practic/4-18.html">Анализ высотных отметок поверхности</a></li>
+							<li><a href="practic/4-19.html">Анализ диапазонов откосов</a></li>
+							<li><a href="practic/4-20.html">Анализ горизонталей поверхности</a></li>
+							<li><a href="practic/4-21.html">Вычисление композитных объемов </a></li>
+							<li><a href="practic/4-22.html">Создание поверхности TIN для вычисления объема </a></li>
+							<li><a href="practic/4-23.html">Вычисление ограниченных объемов </a></li>
+							<li><a href="practic/4-25.html">Создание модели рельефа </a></li>
+						</ul>					
+					</li>
+					<li><a >Трассы</a>
+						<ul>
+							<li><a href="practic/5-1.html">Общие сведения о трассах</a></li>
+							<li><a href="practic/5-2.html">Создание трассы с переходными кривыми </a></li>
+							<li><a href="practic/5-3.html">Создание части объекта трассы наилучшего вписывания</a></li>
+							<li><a href="practic/5-4.html">Добавление к трассе свободных кривых с переходными кривыми </a></li>
+							<li><a href="practic/5-5.html">Добавление к трассе плавающих кривых с переходными кривыми </a></li>
+							<li><a href="practic/5-6.html">Редактирование значений атрибутов трассы </a></li>
+							<li><a href="practic/5-7.html">Редактирование трассы с помощью ручек </a></li>
+							<li><a href="practic/5-8.html">Работа с метками трассы </a></li>
+							<li><a href="practic/5-9.html">Создание и редактирование трасс для смещения </a></li>						
+						</ul>
+					</li>
+					<li><a >Профили</a>
+						<ul>
+							<li><a href="practic/6-1.html">Объект Профиль</a></li>
+							<li><a href="practic/6-2.html">Создание и отображение профилей поверхностей </a></li>
+							<li><a href="practic/6-3.html">Изменение стиля профиля </a></li>
+							<li><a href="practic/6-4.html">Просмотр характеристик профиля </a></li>
+							<li><a href="practic/6-5.html">Быстрое построение профиля </a></li>
+							<li><a href="practic/6-6.html">Создание профиля компоновки </a></li>
+							<li><a href="practic/6-7.html">Редактирование профиля компоновки </a></li>
+							<li><a href="practic/6-8.html">Копирование профиля компоновки </a></li>
+							<li><a href="practic/6-9.html">Редактирование стиля вида профиля </a></li>
+							<li><a href="practic/6-10.html">Создание и редактирование меток профиля </a></li>
+							<li><a href="practic/6-11.html">Редактирование области данных вида профиля </a></li>
+							<li><a href="practic/6-12.html">Разделение вида профиля </a></li>
+							<li><a href="practic/6-13.html">Создание нескольких видов профилей </a></li>
+						</ul>					
+					</li>
+					<li><a >Участки </a>
+						<ul>
+							<li><a href="practic/7-1.html">Общие сведения </a></li>
+							<li><a href="practic/7-2.html">Создание участков</a></li>
+							<li><a href="practic/7-3.html">Деление участка на части с помощью сегмента </a></li>
+							<li><a href="practic/7-4.html">Деление участка на части с помощью линии сдвига </a></li>
+							<li><a href="practic/7-5.html">Деление участка на части с помощью радиальной линии </a></li>
+						</ul>					
+					</li>
+					<li><a >Коридоры </a>
+						<ul>
+							<li><a href="practic/8-1.html">Общие сведения о коридорах </a></li>
+							<li><a href="practic/8-2.html">Построение трасс</a></li>
+							<li><a href="practic/8-3.html">Построение профиля</a></li>
+							<li><a href="practic/8-4.html">Построение конструкции с созданием элементов конструкции</a></li>
+							<li><a href="practic/8-5.html">Построение коридора и извлечение трехмерных объектов</a></li>
+						</ul>					
+					</li>
+					<li><a >Поверхности со структурными линиями</a>
+						<ul>
+							<li><a href="practic/9-1.html">Добавление растрового изображения</a></li>
+							<li><a href="practic/9-2.html">Масштабирование</a></li>
+							<li><a href="practic/9-3.html">Создание группы точек</a></li>
+							<li><a href="practic/9-4.html">Создание и настройки отображения поверхности</a></li>
+							<li><a href="practic/9-5.html">Добавление к поверхности горизонталей</a></li>
+							<li><a href="practic/9-6.html">Создание газонов и тротуаров</a></li>
+							<li><a href="practic/9-7.html">Создание откосов</a></li>
+							<li><a href="practic/9-8.html">Границы и дома</a></li>
+						</ul>					
+					</li>
+					<li><a >Наименование объектов</a>
+						<ul>
+							<li><a href="practic/10-1.html">Именование поверхностей</a></li>
+							<li><a href="practic/10-2.html">Именование коридоров</a></li>
+							<li><a href="practic/10-3.html">Именование трасс</a></li>
+							<li><a href="practic/10-4.html">Именование профилей</a></li>
+							<li><a href="practic/10-5.html">Именование элементов конструкций (PKT)</a></li>
+						</ul>					
+					</li>
+				</ul>
+			</nav>
+
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

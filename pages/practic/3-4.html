@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Преобразование точек AutoCAD в точки AutoCAD Civil 3D</title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet"
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+
+				<script type="text/javascript">
+			$(function() {
+				$('nav#practic').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false,
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Точки'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li class="active"><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">
+<h2>Преобразование точек AutoCAD в точки AutoCAD Civil 3D</h2>
+<p>В файле точки рельефа.dwg в окне Область инструментов на вкладке Навигатор щелкните правой кнопкой мыши на коллекции Точки. Выберите команду Создать. Перед вами отобразится панель инструментов Создание точек. Команды данной панели сгруппированы в меню по способам создания точек.
+<img src="../../img/practic/3points/l3p1.png"/>
+<img src="../../img/practic/3points/l3p2.png"/>
+</p><p>На панели инструментов Создание точек нажмите кнопку (<img style=" display: inline; vertical-align: -20px;"  src="../../img/practic/3points/l3p3.png"/> ), чтобы полностью развернуть панель.
+<img src="../../img/practic/3points/l3p4.png"/>
+</p><p>В категории Создание точек в полях Запрашивать отметки, Запрашивать имена точек и Запрашивать описания выберите опцию Автоматически. Это означает, что при создании точек имена и описания будут присваиваться по умолчанию. В ходе выполнения преобразования отметка точке AutoCAD Civil 3D будет назначаться в соответствии с отметкой точки AutoCAD. 
+<img src="../../img/practic/3points/l3p5.png"/>
+</p><p>В поле Описание по умолчанию по умолчанию введите код ключа-описателя REL. В ходе выполнения команды создания точек им будет автоматически присваиваться указанное описание. 
+<img src="../../img/practic/3points/l3p6.png"/>
+</p><p>Не закрывая панели инструментов Создание точек, отключите видимость слоев так, чтобы на чертеже были видны только точки, расположенные на слое Точки-рельеф. 
+
+<div style="background-color: lightblue; border: 1px solid gray; width: 880px; margin: 0 auto;">
+<p>Для этого необходимо нажать на свойства слоя в ленте инструментов.
+<img src="../../img/practic/3points/l3p7.png"/>
+</p><p>В открывшемся окне выделить все слои, кроме точки-рельеф. Для этого надо выделить любой слой и нажать Ctrl+A (выделить все), затем щелкнуть по слою точки-рельеф с зажатым Ctrl. Этот пункт исключится из списка. После чего нажать на иконку активности слоя (лампочки) на любом из слоев:
+<img src="../../img/practic/3points/l3p8.png"/>
+</p>
+</div>
+</p><p>На панели инструментов Создание точек разверните список команд, объединенных в группу Разное, и выберите пункт Преобразовать точки AutoCAD. Выделите все точки на чертеже. Выделение происходит путем, схожим с инструментом лассо в Adobe Photoshop. После преобразования найденных точек система выдаст запрос о следующих точках AutoCAD, нажмите клавишу Enter для завершения команды. Закройте окно «создание точек»
+<img src="../../img/practic/3points/l3p9.png"/>
+<img  src="../../img/practic/3points/l3p10.png"/>
+</p><p>Включите видимость слоев. Убедитесь, что около имени группы точек Точки рельефа коллекции Точки отобразился значок, предупреждающий о необходимости обновления группы точек. Нажмите ПКМ и выберите Актуализировать.
+<img src="../../img/practic/3points/l3p11.png"/>
+<img src="../../img/practic/3points/l3p12.png"/>
+</p><p>Отключите видимость слоя Отметки. В коллекции Группы точек щелкните правой кнопкой мыши по названию группы точек Точки рельефа и выберите команду Свойства. В диалоговом окне Свойства группы точек смените стиль отображения точек (например, Дерево широколиственное). Нажмите ОК. Отображение точек изменится в соответствии с указанным стилем.
+<img src="../../img/practic/3points/l3p13.png"/>
+<img src="../../img/practic/3points/l3p14.png"/>
+</p><p>Полученный результат можете сравнить с файлом точки рельефа_1.dwg, расположенным в папке Учебные файлы/Точки/Результаты.
+</p><p>Для управления цветом обозначения точки и ее метки используйте Диспетчер слоев. Цвет слоя V-NODE-STRM определяет цвет обозначения точки, цвет слоя V-NODE-TEXT – цвет метки точки. Измените цвета обозначения и метки точки по своему усмотрению. В коллекции Точки нажмите правую кнопку мыши на группе точек Точки рельефа. Выберите команду Редактировать точки. Точки отображаются в таблице Редактор точек. Просмотрите и измените их атрибуты. Закройте Редактор точек.
+</p>
+</div>
+
+
+	<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>
+			<nav id="practic">
+				<ul>											
+						<li><a href="../practic.html"><- Назад</a>
+							<li><a href="3-1.html">Общие сведения о точках</a></li>
+							<li><a href="3-2.html">Создание ключей-описателей</a></li>
+							<li><a href="3-3.html">Создание групп точек</a></li>
+							<li><a href="3-4.html">Преобразование точек AutoCAD в точки AutoCAD Civil 3D</a></li>
+							<li><a href="3-5.html">Создание точек в местах с указанными координатами</a></li>
+							<li><a href="3-6.html">Импорт точек из файла базы данных MS Access </a></li>
+							<li><a href="3-7.html">Импорт точек из текстового файла</a></li>
+							<li><a href="3-8.html">Стили точек</a></li>
+							<li><a href="3-9.html">Метки точек</a></li>
+							<li><a href="3-10.html">Создание пользовательских свойств</a></li>
+							<li><a href="3-11.html">Назначение пользовательских свойств группам точек </a></li>
+							<li><a href="3-12.html">Запрос информации пользовательских свойств</a></li>
+				</ul>					
+			</nav>
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

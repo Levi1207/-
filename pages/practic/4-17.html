@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Вычерчивание стоков воды </title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet"
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+
+				<script type="text/javascript">
+			$(function() {
+				$('nav#practic').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false,
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Поверхности'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li class="active"><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">
+<h2>Вычерчивание стоков воды </h2>
+<p>Служебная программа для работы со стоком воды позволяет отслеживать траектории стока воды по поверхности. При использовании этой служебной программы вычерчивается двумерная или трехмерная полилиния, отражающая направление стока воды. Можно также задать вычерчивание маркера в начальной точке траектории. В случае разветвления потока для каждой образующейся траектории стока воды вычерчивается новая полилиния. 
+</p>
+<ol><li>Продолжите работу с чертежом <i>водосборы и водостоки.dwg</i>. Откройте чертеж. 
+</li><li>Создайте новый слой под именем Сток воды. На этом слое будут располагаться полилинии, обозначающие траекторию стока. Установите цвет и вес линий. 
+</li><li>Выделите на чертеже поверхность Рельеф. На вкладке Поверхность TIN на панели Анализ выберите команду Сток воды. 
+<img src="../../img/practic/4poverh/17/1.png"/>
+</li><li>В диалоговом окне Сток воды в разделе Траектория стока для свойства Слой траектории щелкните в ячейке столбца Значение, нажмите на кнопку<img style=" display: inline; vertical-align: -20px;" src="../../img/practic/4poverh/17/6.png"/> .
+<img src="../../img/practic/4poverh/17/2.png"/>
+</li><li>В диалоговом окне Выбор слоя щелкните по кнопке Создать 
+<img src="../../img/practic/4poverh/17/3.png"/>
+</li><li>В окне Выбор слоя выберите слой Сток воды, нажмите ОК. 
+</li><li>В разделе Маркер стока для параметра Поместить маркер в начальной точке выберите значение Да. 
+</li><li>Для параметра Стиль маркера начальной точки, выберите Стандартный. 
+<img src="../../img/practic/4poverh/17/4.png"/>
+</li><li>В окне чертежа обратите внимание на выступающую берму вдоль южного края поверхности. Укажите точку наверху бермы. Вычерчивается 2D-полилиния, представляющая поток воды из выбранной точки. Начальная точка траектории помечается базовым маркером с применением стиля Стандартный. Выберите другие местоположения вдоль бермы и на поверхности, чтобы увидеть направление потока воды на разных участках. Если траектория воды разделяется, для продолжения каждой траектории вычерчиваются дополнительные линии. Возможный результат анализа стоков воды представлен на рис. 
+<img src="../../img/practic/4poverh/17/5.png"/>
+</li><li>Сравните полученный результат с файлом <i>водосборы и водостоки_2.dwg</i>, расположенным в папке <i>Учебные файлы/Поверхности/Результаты</i>. 
+</li><li>Сохраните файл. 
+</li></ol>
+	</div>
+
+
+	<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>
+			<nav id="practic">
+				<ul>											
+							<li><a href="../practic.html"><- Назад</a>
+							<li><a href="4-1.html">Общие сведения о поверхностях</a></li>
+							<li><a href="4-2.html">Создание поверхности </a></li>
+							<li><a href="4-3.html">Добавление групп точек к описанию поверхности </a></li>
+							<li><a href="4-4.html">Структурные линии поверхности </a></li>
+							<li><a href="4-5.html">Добавление структурных линий </a></li>
+							<li><a href="4-6.html">Границы </a></li>
+							<li><a href="4-7.html">Создание границы </a></li>
+							<li><a href="4-8.html">Создание поверхности на основе горизонталей</a></li>
+							<li><a href="4-9.html">Добавление данных точек </a></li>
+							<li><a href="4-10.html">Перестановка рёбер </a></li>
+							<li><a href="4-11.html">Удаление линий TIN</a></li>
+							<li><a href="4-12.html">Сглаживание поверхности</a></li>
+							<li><a href="4-13.html">Метки горизонталей</a></li>
+							<li><a href="4-14.html">Метки высотной отметки точки </a></li>
+							<li><a href="4-15.html">Метки откоса</a></li>
+							<li><a href="4-16.html">Анализ водосборов поверхности </a></li>
+							<li><a href="4-17.html">Вычерчивание стоков воды  </a></li>
+							<li><a href="4-18.html">Анализ высотных отметок поверхности</a></li>
+							<li><a href="4-19.html">Анализ диапазонов откосов</a></li>
+							<li><a href="4-20.html">Анализ горизонталей поверхности</a></li>
+							<li><a href="4-21.html">Вычисление композитных объемов </a></li>
+							<li><a href="4-22.html">Создание поверхности TIN для вычисления объема </a></li>
+							<li><a href="4-23.html">Вычисление ограниченных объемов </a></li>
+							<li><a href="4-25.html">Создание модели рельефа </a></li>
+				</ul>					
+			</nav>
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

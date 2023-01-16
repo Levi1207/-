@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Добавление к описанию поверхности данных точек </title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet"
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+
+				<script type="text/javascript">
+			$(function() {
+				$('nav#practic').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false,
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Поверхности'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li class="active"><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">
+<h2>Добавление к описанию поверхности данных точек </h2>
+<p>В качестве источников данных точек поверхности будут использованы точки AutoCAD, расположенные на соответствующих отметках. К поверхности будут добавлены неразрушающие структурные линии, отражающие особенности рельефа местности.</p>
+<ol><li>Из папки <i>Учебные файлы/Поверхности</i> откройте файл <i>поверхностъ-3.dwg</i>. Файл содержит точки AutoCAD, обозначающие точки рельефа и расположенные на соответствующих отметках. Также в чертеже имеются полилинии, отображающие особенности рельефа и расположенные на нулевых отметках. 
+</li><li>Создайте новую поверхность TIN. В качестве свойств поверхности задайте следующие значения: 
+<img src="../../img/practic/4poverh/9/1.png"/>
+</li><li>Отредактируйте стиль поверхности так, чтобы в представлениях План и Модель были видны треугольники, отключите видимость границы. 
+<img src="../../img/practic/4poverh/9/2.png"/>
+</li><li>В коллекции Определение поверхности Рельеф щелкните правой кнопкой мыши на элементе Объекты чертежа. Из контекстного меню выберите команду Добавить. 
+</li><li>В диалоговом окне Добавление точек из объектов чертежа в списке Тип объекта выберите Точки, введите описание Точки рельефа. Нажмите ОК. 
+<img src="../../img/practic/4poverh/9/3.png"/>
+</li><li>На запрос о выборе объектов с помощью рамки выделите все точки AutoCAD, расположенные на чертеже. Закончите выполнение команды, нажав клавишу Enter. 
+</li><li>Оцените правильность построения поверхности, просмотрев ее в трехмерном представлении 
+<img src="../../img/practic/4poverh/9/4.png"/>
+</li><li>Сравните полученный результат с файлом <i>поверхность-3_1.dwg</i>, расположенным в папке <i>Учебные файлы/Поверхности/Результаты</i>. 
+</li><li>Сохраните файл. 
+ </li></ol>
+	</div>
+
+
+	<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>
+			<nav id="practic">
+				<ul>											
+							<li><a href="../practic.html"><- Назад</a>
+							<li><a href="4-1.html">Общие сведения о поверхностях</a></li>
+							<li><a href="4-2.html">Создание поверхности </a></li>
+							<li><a href="4-3.html">Добавление групп точек к описанию поверхности </a></li>
+							<li><a href="4-4.html">Структурные линии поверхности </a></li>
+							<li><a href="4-5.html">Добавление структурных линий </a></li>
+							<li><a href="4-6.html">Границы </a></li>
+							<li><a href="4-7.html">Создание границы </a></li>
+							<li><a href="4-8.html">Создание поверхности на основе горизонталей</a></li>
+							<li><a href="4-9.html">Добавление данных точек </a></li>
+							<li><a href="4-10.html">Перестановка рёбер </a></li>
+							<li><a href="4-11.html">Удаление линий TIN</a></li>
+							<li><a href="4-12.html">Сглаживание поверхности</a></li>
+							<li><a href="4-13.html">Метки горизонталей</a></li>
+							<li><a href="4-14.html">Метки высотной отметки точки </a></li>
+							<li><a href="4-15.html">Метки откоса</a></li>
+							<li><a href="4-16.html">Анализ водосборов поверхности </a></li>
+							<li><a href="4-17.html">Вычерчивание стоков воды  </a></li>
+							<li><a href="4-18.html">Анализ высотных отметок поверхности</a></li>
+							<li><a href="4-19.html">Анализ диапазонов откосов</a></li>
+							<li><a href="4-20.html">Анализ горизонталей поверхности</a></li>
+							<li><a href="4-21.html">Вычисление композитных объемов </a></li>
+							<li><a href="4-22.html">Создание поверхности TIN для вычисления объема </a></li>
+							<li><a href="4-23.html">Вычисление ограниченных объемов </a></li>
+							<li><a href="4-25.html">Создание модели рельефа </a></li>
+				</ul>					
+			</nav>
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

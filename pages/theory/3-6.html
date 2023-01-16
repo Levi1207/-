@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Практическое применение</title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet" 
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('nav#theor').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false, 
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'ГИС и геология'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+			<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+</div>
+
+<div class="menur">
+	<div class="pager">		
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">	
+<h2>Практическое применение</h2>
+<img id="imgc" src="../../img/theory/66.jpg"/>
+<p>По состоянию на текущий момент широкое внедрение ГИС-технологий в различные сферы наук о Земле приобретает характер устойчивой тенденции. Геоинформационные технологии в геологии являются весьма важным инструментом для решения производственных и научных задач, связанных как с развитием минерально-сырьевой базы, так и с познанием закономерностей развития земной коры.
+<br>
+Рыночный вариант развития минерально-сырьевой базы требует разработки новых технико-экономических решений для получения максимальной прибыли при минимальных затратах. Од¬ним из таких решений является применение высокопроизводительных технологий, в частности, компьютерных геоинформационных систем для проектирования, анализа и наглядного отображения результатов. Применение ГИС позволяет решать следующие задачи:
+</p>
+<ul id="ululu">
+<li>каталогизация и управление природными и производственными минерально-сырьевыми ресурсами;
+</li>
+<li>планирование землепользования, анализ пригодности земель, районирование и комплексная оценка территорий при разработке месторождений полезных ископаемых;
+</li>
+<li>оптимизация промышленной инфраструктуры, планирование и оптимизация перевозок, организация новых транспортных маршрутов;
+</li>
+<li>управление распределенным хозяйством (энергосети, трубопроводы, дорожное хозяйство);
+</li>
+<li>осуществление анализа и проведение прогнозирования различных процессов на основе имеющихся данных;
+</li>
+<li>обеспечение информацией руководства при стратегическом планировании и принятии решений;
+</li>
+<li>оптимизация размещения горно-добывающих и обогатительных предприятий, распределение зон их влияния;
+</li>
+<li>экологический мониторинг, оценка и прогнозирование состояния окружающей среды при разработке месторождений полезных ископаемых;
+</li>
+<li>получение картографической продукции высокого качества;
+</li>
+<li>распечатка необходимой информации в удобных для анализа формах и масштабах. 
+</li>
+</ul>
+	
+	
+	</div>
+			
+			
+<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>			
+			
+			
+			
+			
+			<nav id="theor">
+				<ul>											
+						<li><a href="../theory.html"><- Назад</a>
+							<li><a href="3-1.html">Задачи</a></li>
+							<li><a href="3-2.html">Геологическая съемка</a></li>
+							<li><a href="3-3.html">Геологические карты</a></li>
+							<li><a href="3-4.html">Карты изолиний</a></li>
+							<li><a href="3-5.html">Дистанционное зондирование</a></li>
+							<li><a href="3-6.html">Практическое применение</a></li>
+				</ul>					
+			</nav>	
+
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

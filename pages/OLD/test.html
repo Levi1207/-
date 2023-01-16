@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Тестирование</title>
+
+		<link type="text/css" rel="stylesheet" href="../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../dist/core/css/jquery.mmenu.all.css" />
+
+<!--Для теста-->		
+<link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/jQuizler.css" />
+<script type="text/javascript" src="../js/1.9.1jquery.min.js"></script>
+<script type="text/javascript" src="../js/jQuizler.js"></script>
+
+<script type="text/javascript">
+var questions = [
+    {
+        type: "choose",
+        question: "<h3>Цифровое моделирование рельефа - это...</h3>",
+        answers: [
+            "цифровое представления 3-мерных пространственных объектов (поверхностей, рельефов) в виде трехмерных данных как совокупности высот или отметок глубин и иных значений аппликат (координаты Z) в узлах регулярной сети с образованием матрицы высот, нерегулярной треугольной сети (TIN) или как совокупность записей горизонталей (изогипс, изобат) или иных изолиний.",
+            "цифровое представления 3-мерных пространственных объектов (поверхностей, рельефов) в виде трехмерных данных как совокупности высот или отметок глубин и иных значений аппликат (координаты Z) в узлах регулярной сети с образованием матрицы высот.",
+            "цифровое представления 3-мерных пространственных объектов (поверхностей, рельефов) в виде трехмерных данных как совокупности высот или отметок глубин и иных значений аппликат (координаты Z) в узлах нерегулярной треугольной сети (TIN) или как совокупность записей горизонталей (изогипс, изобат) или иных изолиний."
+        ],
+        correct: [1]
+    },
+	{
+        type: "choose",
+        question: "<h3>Трехмерное геометрическое представление рельефа - это...</h3>",
+        answers: [
+            "план",
+            "карта",
+            "поверхность"
+        ],
+        correct: [2]
+    },
+	{
+        type: "choose",
+        question: "<h3>Триангуляция Делоне - метод вычислений, используемый при создании...</h3>",
+        answers: [
+            "одна из точек лежит внутри окружности, описанной вокруг любого треугольника.",
+            "ни одна из точек не лежит внутри окружности, описанной вокруг любого треугольника.",
+            "ни одна из точек не лежит внутри окружности, вписанной в какой-либо треугольник."
+        ],
+        correct: [1]
+    },
+	{
+        type: "choose",
+        question: "<h3>Как в переводе с английского будет поверхность TIN ?</h3>",
+        answers: [
+            "нерегулярная треугольная сеть.",
+            "регулярная треугольная сеть.",
+            "нерегулярная квадратная сеть."
+        ],
+        correct: [2]
+    },
+	{
+        type: "choose",
+        question: "<h3>Модель DEM - это...</h3>",
+        answers: [
+            "цифровая модель рельефа по регулярной сетке.",
+            "цифровая модель рельефа по нерегулярной сетке.",
+            "цифровая модель рельефа по сетке, созданной на основе случайно расположенных точек.",
+        ],
+        correct: [1]
+    },
+	{
+        type: "choose",
+        question: "<h3>Линии, соединяющие точки одинаковой высоты, называются...</h3>",
+        answers: [
+            "вертикали",
+            "горизонтали",
+            "изоплеты"
+        ],
+        correct: [3]
+    },
+	{
+        type: "choose",
+        question: "<h3>Общее название линий, соединяющих точки одинаковых значений статистической величины?</h3>",
+        answers: [
+            "изолинии",
+            "горизонтали",
+            "изоплеты"
+        ],
+        correct: [2]
+    },
+	{
+        type: "choose",
+        question: "<h3>Линии равных значений дискретной статистической величины, между которыми статистическая величина может изменяться скачком или быть неопределена</h3>",
+        answers: [
+            "изолинии",
+            "горизонтали",
+			"изоплеты"
+        ],
+        correct: [3]
+    },
+	{
+        type: "choose",
+        question: "<h3>Способ нахождения промежуточных значений величины по имеющемуся дискретному набору известных значений</h3>",
+        answers: [
+            "аппроксимация",
+            "экстраполяция",
+            "интерполяция"
+        ],
+        correct: [2]
+    },
+	{
+        type: "choose",
+        question: "<h3>Метод интерполяции, исходящий из предложения, что чем ближе друг к другу находятся точки данных, тем ближе их значения</h3>",
+        answers: [
+            "метод обратных взвешенных расстояний (ОВР)",
+            "метод поверхности тренда",
+            "крикинг"
+        ],
+        correct: [3]
+    },
+	{
+        type: "choose",
+        question: "<h3>Способ картографического изображения рельефа, основанный на расчёте относительных освещённостей склонов (участков склонов), образованных треугольными гранями модели TIN</h3>",
+        answers: [
+            "гипсометрический способ (ОВР)",
+            "аналитическая отмывка рельефа",
+            "способ ареалов"
+        ],
+        correct: [1]
+    },
+	{
+        type: "choose",
+        question: "<h3>Экспозиция склона (аспект) - это...</h3>",
+        answers: [
+            "ориентация склона",
+            "визуализация склона",
+            "анализ склона"
+        ],
+        correct: [1]
+    },
+	{
+        type: "choose",
+        question: "<h3>Какое их утверждений верно:</h3>",
+        answers: [
+            "сетчатые поверхности, как правило, загружаются быстрее и требуют меньшего объема дискового пространства по сравнению с поверхностями TIN",
+            "сетчатые поверхности, как правило, загружаются медленне и требуют больше объема дискового пространства по сравнению с поверхностями TIN",
+            "сетчатые поверхности, как правило, загружаются одинаково по времени и требуют такой же объем дискового пространства, как и поверхности TIN"
+        ],
+        correct: [2]
+    },
+	{
+        type: "choose",
+        question: "<h3>Эта матрица соответствует методу точечного изображения поверхности, где каждая точка несёт одно значение высоты.</h3>",
+        answers: [
+            "матрица высот",
+            "матрица качеств",
+            "матрица точек"
+        ],
+        correct: [3]
+    }
+];
+
+$("document").ready(function(){
+    $("#jQuizler").jQuizler(questions);
+});
+
+</script>
+
+
+<!--Для меню-->	
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../dist/core/js/jquery.mmenu.min.all.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('nav#theor').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow' ],
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Теория'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+		<script type="text/javascript">
+			$(function() {
+				$('nav#practic').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow' ],
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Практика'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+	</head>
+	<body>
+<div class="headerr">
+	<div>
+		<a href="index.html">Моделирование землеустроительных работ<br>	</a>
+		<a href="index.html">на базе инструментальной среды <br>		</a>
+		<a href="index.html">Autocad Civil 3D		</a>
+	</div>
+</div>
+
+<div class="menur">
+	<div class="pager">		
+	<ul>
+		<li ><a href="../index.html">Главная</a></li>
+		<li ><a href="#theor">Теория</a></li>
+		<li><a href="#practic">Практика</a></li>
+		<li ><a href="glossary.html">Глоссарий</a></li>
+		<li class="active"><a href="test.html">Тестирование</a></li>
+		<li><a href="litruche.html">Литература</a></li>
+		<li ><a href="link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">
+	
+	
+<h2>Тестирование</h2>
+
+  <div id="jQuizler" class="main-quiz-holder">
+        <h3>Тест на тему: "Операционные системы"</h3>
+		
+        <button class="btn btn-large">Начать тест</button>
+    </div>
+
+	
+	
+	</div>
+			
+			
+			
+			
+			
+			
+			
+			<nav id="theor">
+				<ul>
+					<li><a href="#">Цифровое моделирование рельефа</a>
+						<ul>
+							<li><a href="#about/history">Описание ЦМР</a></li>
+							<li><a href="#about/team">Источники данных для ЦМР</a></li>
+							<li><a href="#about/address">Точность ЦМР</a></li>
+							<li><a href="#about/history">Типы цифровых моделей рельефа </a></li>
+						</ul>					
+					</li>
+					<li><a href="#about">Применение ЦМР </a>
+						<ul>
+							<li><a href="#about/history">Использование ЦМР</a></li>
+							<li><a href="#about/team">Расчет углов наклона и экспозиций склонов</a></li>
+							<li><a href="#about/address">Оценка формы склонов</a></li>
+							<li><a href="#about/history">Генерация сети тальвегов и водоразделов</a></li>
+							<li><a href="#about/team">Аналитическая отмывка рельефа</a></li>
+							<li><a href="#about/address">Трехмерное представление рельефа</a></li>
+							<li><a href="#about/team">Анализ видимости/невидимости</a></li>
+							<li><a href="#about/address">Интерполяция</a></li>
+						</ul>
+					</li>
+					<li><a href="#contact">ГИС и геология</a>
+						<ul>
+							<li><a href="#about/history">Задачи</a></li>
+							<li><a href="#about/team">Геологическая съемка</a></li>
+							<li><a href="#about/address">Геологические карты</a></li>
+							<li><a href="#about/history">Карты изолиний</a></li>
+							<li><a href="#about/team">Дистанционное зондирование</a></li>
+							<li><a href="#about/address">Практическое применение</a></li>
+						</ul>					
+					</li>
+				</ul>
+			</nav>
+			<nav id="practic">
+				<ul>
+					<li><a href="#">Архитектура Civil 3D </a>
+						<ul>
+							<li><a href="#about/history">Архитектура Civil 3D </a></li>
+							<li><a href="#about/team">Связи между объектами</a></li>
+							<li><a href="#about/address">Элементы окна: Область инструментов</a></li>
+							<li><a href="#about/history">Вкладка "Навигатор"</a></li>
+							<li><a href="#about/history">Вкладка "Параметры"</a></li>
+							<li><a href="#about/team">Вкладка "Съёмка"</a></li>
+							<li><a href="#about/address">Вкладка "Окно инструментов"</a></li>
+							<li><a href="#about/history">Окно "Панорама"</a></li>
+						</ul>					
+					</li>
+					<li><a href="#about">Работа с чертежами </a>
+						<ul>
+							<li><a href="#about/history">Настройки диалогового окна параметров</a></li>
+							<li><a href="#about/team">Указание параметров уровня чертежа</a></li>
+							<li><a href="#about/address">Указание параметров уровня объекта</a></li>
+							<li><a href="#about/history">Указание параметров уровня команды</a></li>
+							<li><a href="#about/team">Использование шаблонов чертежа</a></li>
+						</ul>
+					</li>
+					<li><a href="#contact">Точки</a>
+						<ul>
+							<li><a href="#about/history">Общие сведения о точках</a></li>
+							<li><a href="#about/team">Создание ключей-описателей</a></li>
+							<li><a href="#about/address">Создание групп точек</a></li>
+							<li><a href="#about/history">Преобразование точек AutoCAD в точки AutoCAD Civil 3D</a></li>
+							<li><a href="#about/team">Создание точек в местах с указанными координатами</a></li>
+							<li><a href="#about/address">Импорт точек из файла базы данных MS Access </a></li>
+							<li><a href="#about/history">Импорт точек из текстового файла</a></li>
+							<li><a href="#about/team">Стили точек</a></li>
+							<li><a href="#about/address">Метки точек</a></li>
+							<li><a href="#about/history">Создание пользовательских свойств</a></li>
+							<li><a href="#about/team">Назначение пользовательских свойств группам точек </a></li>
+							<li><a href="#about/address">Запрос информации пользовательских свойств</a></li>
+						</ul>					
+					</li>
+					<li><a href="#">Поверхности</a>
+						<ul>
+							<li><a href="#about/history">Общие сведения о поверхностях</a></li>
+							<li><a href="#about/team">Создание поверхности </a></li>
+							<li><a href="#about/address">Добавление групп точек к описанию поверхности </a></li>
+							<li><a href="#about/history">Структурные линии поверхности </a></li>
+							<li><a href="#about/history">Добавление структурных линий </a></li>
+							<li><a href="#about/team">Границы </a></li>
+							<li><a href="#about/address">Создание границы </a></li>
+							<li><a href="#about/history">Создание поверхности на основе горизонталей</a></li>
+							<li><a href="#about/history">Добавление данных точек </a></li>
+							<li><a href="#about/team">Перестановка рёбер </a></li>
+							<li><a href="#about/address">Удаление линий TIN</a></li>
+							<li><a href="#about/history">Сглаживание поверхности</a></li>
+							<li><a href="#about/history">Метки горизонталей</a></li>
+							<li><a href="#about/team">Метки высотной отметки точки </a></li>
+							<li><a href="#about/address">Метки откоса</a></li>
+							<li><a href="#about/history">Анализ водосборов поверхности </a></li>
+							<li><a href="#about/team">Вычерчивание стоков воды  </a></li>
+							<li><a href="#about/address">Анализ высотных отметок поверхности</a></li>
+							<li><a href="#about/history">Анализ диапазонов откосов</a></li>
+							<li><a href="#about/history">Анализ горизонталей поверхности</a></li>
+							<li><a href="#about/team">Вычисление композитных объемов </a></li>
+							<li><a href="#about/address">Создание поверхности TIN для вычисления объема </a></li>
+							<li><a href="#about/history">Вычисление ограниченных объемов </a></li>
+							<li><a href="#about/history">Натягивание изображения аэросъемки на поверхность</a></li>
+							<li><a href="#about/team">Создание модели рельефа </a></li>
+						</ul>					
+					</li>
+					<li><a href="#about">Трассы</a>
+						<ul>
+							<li><a href="#about/history">Общие сведения о трассах</a></li>
+							<li><a href="#about/team">Создание трассы с переходными кривыми </a></li>
+							<li><a href="#about/address">Создание части объекта трассы наилучшего вписывания</a></li>
+							<li><a href="#about/history">Добавление к трассе свободных кривых с переходными кривыми </a></li>
+							<li><a href="#about/team">Добавление к трассе плавающих кривых с переходными кривыми </a></li>
+							<li><a href="#about/history">Редактирование значений атрибутов трассы </a></li>
+							<li><a href="#about/team">Редактирование трассы с помощью ручек </a></li>
+							<li><a href="#about/address">Работа с метками трассы </a></li>
+							<li><a href="#about/history">Создание и редактирование трасс для смещения </a></li>						
+						</ul>
+					</li>
+					<li><a href="#contact">Профили</a>
+						<ul>
+							<li><a href="#about/history">Объект Профиль</a></li>
+							<li><a href="#about/team">Создание и отображение профилей поверхностей </a></li>
+							<li><a href="#about/address">Изменение стиля профиля </a></li>
+							<li><a href="#about/history">Просмотр характеристик профиля </a></li>
+							<li><a href="#about/team">Быстрое построение профиля </a></li>
+							<li><a href="#about/address">Создание профиля компоновки </a></li>
+							<li><a href="#about/history">Редактирование профиля компоновки </a></li>
+							<li><a href="#about/team">Копирование профиля компоновки </a></li>
+							<li><a href="#about/address">Редактирование стиля вида профиля </a></li>
+							<li><a href="#about/history">Создание и редактирование меток профиля </a></li>
+							<li><a href="#about/team">Редактирование области данных вида профиля </a></li>
+							<li><a href="#about/address">Разделение вида профиля </a></li>
+							<li><a href="#about/address">Создание нескольких видов профилей </a></li>
+						</ul>					
+					</li>
+					<li><a href="#contact">Участки </a>
+						<ul>
+							<li><a href="#about/history">Общие сведения </a></li>
+							<li><a href="#about/team">Создание участков</a></li>
+							<li><a href="#about/address">Деление участка на части с помощью сегмента </a></li>
+							<li><a href="#about/history">Деление участка на части с помощью линии сдвига </a></li>
+							<li><a href="#about/team">Деление участка на части с помощью радиальной линии </a></li>
+						</ul>					
+					</li>
+					</ul>
+			</nav>
+</div>
+	</body>
+</html>

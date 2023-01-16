@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Оценка формы склонов</title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet" 
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('nav#theor').mmenu({
+										extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false, 
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Применение ЦМР '
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+
+			<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">		
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">	
+<h2>Оценка формы склонов</h2>
+<img id="imgc" src="../../img/theory/44.jpeg"/>
+<p>В продолжение анализа геометрических свойств окрестности точки на заданной криволинейной поверхности, соответствующей элементарному склону, можно оценить его форму. Методы такой оценки предлагались неоднократно. К примеру, в работе, посвященной автоматизации построения карт ориентации, формы и относительной освещенности склонов, предлагался алгоритм классификации элементарных склонов по типам их поперечного и продольного профилей в соответствии с подходом к типологии элементарных форм Ю. К. Ефремова. При этом под профилем склона понималась величина (или знак) радиуса кривизны нормального сечения склона в направлении линии наибольшего ската (поперечный профиль) или в перпендикулярном ему направлении (продольный профиль). С точки зрения формализмов дифференциальной геометрии им будут соответствовать частные производные второго порядка от функции рельефа (градиенты изоградиентной поверхности). 
+<br>
+Продолжением линии "элементаризации земной поверхности" следует считать систематику А. Н. Ласточкина, включающую характерные точки и структурные линии рельефа (в том числе линии перегиба продольного и поперечного профилей), а также элементарные поверхности - морфологические элементы, ограниченные морфоизографами (линиями с нулевыми значениями горизонтальной кривизны, отделяющими выпуклые, вогнутые и прямолинейные в плане элементы) и классифицируемые по типам профиля склона и другим морфографическим признакам. 
+</p>
+
+	
+	
+	</div>
+			
+			
+			<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>				
+			
+			
+			
+			
+			<nav id="theor">
+				<ul>											
+							<li><a href="../theory.html"><- Назад</a>
+							<li><a href="2-1.html">Использование ЦМР</a></li>
+							<li><a href="2-2.html">Расчет углов наклона и экспозиций склонов</a></li>
+							<li><a href="2-3.html">Оценка формы склонов</a></li>
+							<li><a href="2-4.html">Генерация сети тальвегов и водоразделов</a></li>
+							<li><a href="2-5.html">Аналитическая отмывка рельефа</a></li>
+							<li><a href="2-6.html">Трехмерное представление рельефа</a></li>
+							<li><a href="2-7.html">Анализ видимости/невидимости</a></li>
+							<li><a href="2-8.html">Интерполяция</a></li>
+				</ul>					
+			</nav>			
+			
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>

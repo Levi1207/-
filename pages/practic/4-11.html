@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>Удаление линий TIN </title>
+
+		<link type="text/css" rel="stylesheet" href="../../demo.css" />
+		<link type="text/css" rel="stylesheet" href="../../dist/core/css/jquery.mmenu.all.css" />
+	<link href="../../css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet"
+      media="all and (min-width: 1024px)" />
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../dist/core/js/jquery.mmenu.min.all.js"></script>
+
+				<script type="text/javascript">
+			$(function() {
+				$('nav#practic').mmenu({
+					extensions	: [ 'effect-slide-menu', 'pageshadow', 'widescreen','multiline' ],
+					onClick : {
+						close: false,
+						setSelected: true
+						},
+					searchfield	: false,
+					counters	: true,
+					navbar 		: {
+						title		: 'Поверхности'
+					},
+					navbars		: [
+						{
+							position	: 'top',
+							content		: [
+								'prev',
+								'title',
+								'close'
+							]
+						}
+					]
+				});
+			});
+		</script>
+		<script type="text/javascript">
+		$(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+				$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div class="headerr">
+
+</div>
+
+<div class="menur">
+	<div class="pager">
+	<ul>
+		<li ><a href="../../index.html">Главная</a></li>
+		<li ><a href="../theory.html">Теория</a></li>
+		<li class="active"><a href="../practic.html">Практика</a></li>
+		<li ><a href="../glossary.html">Глоссарий</a></li>
+		<li><a href="../test.html">Тестирование</a></li>
+		<li><a href="../litruche.html">Литература</a></li>
+		<li ><a href="../link.html">Ссылки</a></li>
+	</ul>
+	</div>
+</div>
+
+<div id="page">
+	<div class="content">
+<h2>Удаление линий TIN </h2>
+<p>Удаление линий TIN может потребоваться, например, если поверхность по периметру содержит треугольники TIN, имеющие длинную и узкую форму. В данном случае треугольники могут неточно отражать поверхность, и их нужно удалить. Линии поверхности TIN или сетки можно также стереть в пределах водоема или фундамента здания, например для создания полости. Путем удаления таких линий можно не допустить прорисовки горизонталей через зоны пустот. При удалении стороны или создается внутренний контур, повторяющий ближние линии, или изменяется внешний контур, следующий новым линиям. 
+</p>
+<ol><li>Продолжите работу с чертежом <i>поверхностъ-3.dwg</i> или откройте папку Удаление линий TIN. Откройте чертеж <i>поверхностъ-3.dwg</i>. 
+</li><li>Добавьте в качестве стандартных структурных линий полилинии, обозначающие строения. Эти полилинии расположены в левой части съемки рельефа и расположены на слое Строения_сооружения. 
+<img src="../../img/practic/4poverh/11/1.png"/>
+<img src="../../img/practic/4poverh/11/2.png"/>
+<img src="../../img/practic/4poverh/11/3.png"/>
+</li><li>Переместите поверхность на задний план, чтобы стали видны исходные полилинии. 
+</li><li>На вкладке Навигатор разверните коллекцию Определение для поверхности Рельеф и щелкните правой кнопкой мыши на позиции Редактировать. Выберите команду Удалить линию. 
+</li><li>В командной строке выдается запрос на выбор кромки (линии) для удаления. Щелкните на ребре, пересекающем плоскость фундамента. Нажмите клавишу Enter. Ребро удаляется, и создается внутренняя граница, продолжающая смежные линии TIN. 
+</li><li>Повторите команду Удалить линию и удалите все линии TIN, расположенные в пределах строений. 
+<img src="../../img/practic/4poverh/11/4.png"/>
+</li><li>Сравните полученный результат с файлом поверхность-3_2.dwg, расположенным в папке Учебные файлы/Поверхности/Результаты. 
+</li><li>Сохраните файл. 
+ </li></ol>
+	</div>
+
+
+	<div class="footer">
+НГТУ им. Р.Е. Алексеева, кафедра ГИС (c) 2022
+</div>
+			<nav id="practic">
+				<ul>											
+							<li><a href="../practic.html"><- Назад</a>
+							<li><a href="4-1.html">Общие сведения о поверхностях</a></li>
+							<li><a href="4-2.html">Создание поверхности </a></li>
+							<li><a href="4-3.html">Добавление групп точек к описанию поверхности </a></li>
+							<li><a href="4-4.html">Структурные линии поверхности </a></li>
+							<li><a href="4-5.html">Добавление структурных линий </a></li>
+							<li><a href="4-6.html">Границы </a></li>
+							<li><a href="4-7.html">Создание границы </a></li>
+							<li><a href="4-8.html">Создание поверхности на основе горизонталей</a></li>
+							<li><a href="4-9.html">Добавление данных точек </a></li>
+							<li><a href="4-10.html">Перестановка рёбер </a></li>
+							<li><a href="4-11.html">Удаление линий TIN</a></li>
+							<li><a href="4-12.html">Сглаживание поверхности</a></li>
+							<li><a href="4-13.html">Метки горизонталей</a></li>
+							<li><a href="4-14.html">Метки высотной отметки точки </a></li>
+							<li><a href="4-15.html">Метки откоса</a></li>
+							<li><a href="4-16.html">Анализ водосборов поверхности </a></li>
+							<li><a href="4-17.html">Вычерчивание стоков воды  </a></li>
+							<li><a href="4-18.html">Анализ высотных отметок поверхности</a></li>
+							<li><a href="4-19.html">Анализ диапазонов откосов</a></li>
+							<li><a href="4-20.html">Анализ горизонталей поверхности</a></li>
+							<li><a href="4-21.html">Вычисление композитных объемов </a></li>
+							<li><a href="4-22.html">Создание поверхности TIN для вычисления объема </a></li>
+							<li><a href="4-23.html">Вычисление ограниченных объемов </a></li>
+							<li><a href="4-25.html">Создание модели рельефа </a></li>
+				</ul>					
+			</nav>
+</div>
+	<DIV ID = "toTop" ><p> ^ Наверх </p></ DIV >
+	</body>
+</html>
