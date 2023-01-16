@@ -1,20 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 *{
 	margin:0;
 	padding:0;
 }
 body{
 	background-color: #fffcdd;
-	background-image: url(img/fon2.png);
+	background-image: url(images/backk.jpg);
 	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 	background-position: 50% 250px;
-	font-family: calibri, sans-serif;
+	font-family: Roboto, sans-serif;
 	font-size: 18px;
 	line-height: 22px;
 
 }
 .headerr{
 	height: 240px;
-	background: url(images/logo.png);
+	background: url(images/logo.jpg) center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin: 0 auto;	
@@ -60,9 +63,9 @@ nav:not(.mm-menu)
 
 .content{
 	background-color: #ffffff;
-	width: 929px;
+	width: 1200px;
 	height: auto;
-	min-height: 500px;
+	min-height: 600px;
 	margin: 30px auto 0;	
 	border-left: 3px solid #014941;
 	border-right: 3px solid #014941;
@@ -71,9 +74,9 @@ nav:not(.mm-menu)
 }
 .content p, a{
 	padding: 15px 15px 0;
-	text-align: justify;
+	text-align: juimage.pngstify;
 	font-size: 17px;
-	max-width: 900px;
+	max-width: 1200px;
 }
 .content  .imgp{
 	padding: 10px;
@@ -137,13 +140,13 @@ margin-left:25px;
 
 .menur{
 	height: 40px;
-	margin: -30px auto -30px;
-	width:935px;
+	margin: 20px auto -30px;
+	width:1200px;
 }
 .pager{
 	margin:0 auto; 
-	width:935px;
-	background-color: #014941;
+	width:1200px;
+	background-color: #01497A;
 	height: 40px;
 	border-bottom: 3px solid #014941;
 }
@@ -155,7 +158,7 @@ margin-left:25px;
 }
 .pager ul li{
 	float:left;
-	border-right:1px solid #eceef4;
+	border-right:20px solid #01497A;
 	height: 34px;
 }
 .pager ul li a{
